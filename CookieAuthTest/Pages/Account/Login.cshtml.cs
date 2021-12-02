@@ -28,7 +28,10 @@ namespace CookieAuthTest.Pages.Account
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, "u1"),
-                    new Claim(ClaimTypes.Email, "u1@uuu.com")
+                    new Claim(ClaimTypes.Email, "u1@uuu.com"),
+                    new Claim("Department", "HR"),
+                    new Claim("Admin", "true"),
+                    new Claim("Manager", "true")
                 };
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
